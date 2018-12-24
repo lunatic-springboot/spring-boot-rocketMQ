@@ -2,6 +2,7 @@ package cn.lunatic.spring.boot.rocketmq.config;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
@@ -16,6 +17,7 @@ import java.io.Serializable;
 @Configuration
 @Getter
 @Setter
+@ToString
 public class RocketMQProperties implements Serializable {
 
     private static final long serialVersionUID = -484821303443538121L;

@@ -17,9 +17,9 @@ public class MQProducerTest {
 
     @Test
     public void send() {
-        for ( int i = 0; i < 100; i++ ) {
-            UserInfo userInfo = UserInfo.builder().id(i).username("UserName" + i + "傻逼").build();
-            producer.send(userInfo, "user-topic-test");
+        for ( int i = 0; i < 5; i++ ) {
+            UserInfo userInfo = UserInfo.builder().id(i).username("Test-UserName" + i).build();
+            producer.send(userInfo, "topic-test", "topic-test-user");
         }
     }
 }
